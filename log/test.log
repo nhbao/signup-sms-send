@@ -2337,3 +2337,199 @@ Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 3390)
   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reminds"[0m
   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nakesha_hegmann@monahan.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "phone") VALUES (?, ?, ?, ?, ?)[0m  [["email", "nakesha_hegmann@monahan.com"], ["encrypted_password", "$2a$04$Th7klkYHgTmOVq5/hvObmePfKRRuSLfYLSNNYl3EtYuPiR5pG3/AG"], ["created_at", "2020-11-19 09:05:07.653231"], ["updated_at", "2020-11-19 09:05:07.653231"], ["phone", "349397207"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRemind Create (0.2ms)[0m  [1m[32mINSERT INTO "reminds" ("user_id", "send_time") VALUES (?, ?)[0m  [["user_id", 1], ["send_time", "2020-11-19 09:05:07.653231"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRemind Load (0.2ms)[0m  [1m[34mSELECT "reminds".* FROM "reminds" ORDER BY "reminds"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRemind Update (0.2ms)[0m  [1m[33mUPDATE "reminds" SET "send_time" = ?, "status" = ? WHERE "reminds"."id" = ?[0m  [["send_time", "2020-11-19 09:05:07.693617"], ["status", 1], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 214)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 15ms (Views: 6.5ms | ActiveRecord: 0.3ms | Allocations: 3346)
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"user"=>{"email"=>"usermail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone"=>"349397207"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "usermail@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "phone") VALUES (?, ?, ?, ?, ?)[0m  [["email", "usermail@gmail.com"], ["encrypted_password", "$2a$04$DhsAy57VLUgNXLZ5XQxW6uMpO8ezdFmbWIfKyvJADRdlHxmeXCN3."], ["created_at", "2020-11-19 09:05:07.778305"], ["updated_at", "2020-11-19 09:05:07.778305"], ["phone", "349397207"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRemind Create (0.7ms)[0m  [1m[32mINSERT INTO "reminds" ("user_id", "send_time") VALUES (?, ?)[0m  [["user_id", 1], ["send_time", "2020-11-19 09:05:07.778305"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRemind Load (0.2ms)[0m  [1m[34mSELECT "reminds".* FROM "reminds" ORDER BY "reminds"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRemind Update (0.5ms)[0m  [1m[33mUPDATE "reminds" SET "send_time" = ?, "status" = ? WHERE "reminds"."id" = ?[0m  [["send_time", "2020-11-19 09:05:07.796061"], ["status", 1], ["id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 51ms (ActiveRecord: 3.9ms | Allocations: 10314)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone"=>"349397207"}}
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 56)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 15ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 3390)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reminds"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "delphine_labadie@auer.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "phone") VALUES (?, ?, ?, ?, ?)[0m  [["email", "delphine_labadie@auer.io"], ["encrypted_password", "$2a$04$o/N1ZM3583g.sBHl9H.b7uAlT12o7/7Nj8MAukqv6IKPUDet0.kcq"], ["created_at", "2020-11-19 09:05:07.886217"], ["updated_at", "2020-11-19 09:05:07.886217"], ["phone", "349397207"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRemind Create (0.7ms)[0m  [1m[32mINSERT INTO "reminds" ("user_id", "send_time") VALUES (?, ?)[0m  [["user_id", 1], ["send_time", "2020-11-19 09:05:07.886217"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRemind Load (0.1ms)[0m  [1m[34mSELECT "reminds".* FROM "reminds" ORDER BY "reminds"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRemind Update (0.3ms)[0m  [1m[33mUPDATE "reminds" SET "send_time" = ?, "status" = ? WHERE "reminds"."id" = ?[0m  [["send_time", "2020-11-19 09:05:07.905287"], ["status", 1], ["id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRemind Create (0.3ms)[0m  [1m[32mINSERT INTO "reminds" ("user_id", "send_time") VALUES (?, ?)[0m  [["user_id", 1], ["send_time", "2020-11-19 09:05:07.886217"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRemind Load (0.2ms)[0m  [1m[34mSELECT "reminds".* FROM "reminds" ORDER BY "reminds"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRemind Update (0.3ms)[0m  [1m[33mUPDATE "reminds" SET "send_time" = ?, "status" = ? WHERE "reminds"."id" = ?[0m  [["send_time", "2020-11-19 09:05:07.940119"], ["status", 1], ["id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reminds"[0m
+  [1m[36mRemind Load (0.2ms)[0m  [1m[34mSELECT "reminds".* FROM "reminds" ORDER BY "reminds"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reminds"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "deshawn@hayes.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "phone") VALUES (?, ?, ?, ?, ?)[0m  [["email", "deshawn@hayes.com"], ["encrypted_password", "$2a$04$EJ2LxWoTfnH7qDQsdCvijOBL.jj6pJ9V2bvj18aCTOyicPyRbk/uS"], ["created_at", "2020-11-19 09:05:07.988169"], ["updated_at", "2020-11-19 09:05:07.988169"], ["phone", "349397207"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "reminds"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "lashay_langworth@rodriguez-stark.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "phone") VALUES (?, ?, ?, ?, ?)[0m  [["email", "lashay_langworth@rodriguez-stark.org"], ["encrypted_password", "$2a$04$1JbLINIGH.4K.CZGMWo6VeemGDqJ1fV.vCuxuCaV0Buvlff1XMHOy"], ["created_at", "2020-11-19 09:09:36.366893"], ["updated_at", "2020-11-19 09:09:36.366893"], ["phone", "349397207"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRemind Create (0.2ms)[0m  [1m[32mINSERT INTO "reminds" ("user_id", "send_time") VALUES (?, ?)[0m  [["user_id", 1], ["send_time", "2020-11-19 09:09:36.366893"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRemind Load (0.1ms)[0m  [1m[34mSELECT "reminds".* FROM "reminds" ORDER BY "reminds"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRemind Update (0.1ms)[0m  [1m[33mUPDATE "reminds" SET "send_time" = ?, "status" = ? WHERE "reminds"."id" = ?[0m  [["send_time", "2020-11-19 09:09:36.387934"], ["status", 1], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 214)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 9ms (Views: 4.1ms | ActiveRecord: 0.2ms | Allocations: 3346)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"user"=>{"email"=>"usermail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone"=>"349397207"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "usermail@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "phone") VALUES (?, ?, ?, ?, ?)[0m  [["email", "usermail@gmail.com"], ["encrypted_password", "$2a$04$2D0N6J3UqjNwzEWsi4Wb5e8AVhpYpQlRiLwLarynA.LFzcLDZZkjO"], ["created_at", "2020-11-19 09:09:36.433342"], ["updated_at", "2020-11-19 09:09:36.433342"], ["phone", "349397207"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRemind Create (0.2ms)[0m  [1m[32mINSERT INTO "reminds" ("user_id", "send_time") VALUES (?, ?)[0m  [["user_id", 1], ["send_time", "2020-11-19 09:09:36.433342"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRemind Load (0.1ms)[0m  [1m[34mSELECT "reminds".* FROM "reminds" ORDER BY "reminds"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRemind Update (0.1ms)[0m  [1m[33mUPDATE "reminds" SET "send_time" = ?, "status" = ? WHERE "reminds"."id" = ?[0m  [["send_time", "2020-11-19 09:09:36.440360"], ["status", 1], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 27ms (ActiveRecord: 1.3ms | Allocations: 10314)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone"=>"349397207"}}
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 56)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 3390)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reminds"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "clay@prohaska-lemke.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "phone") VALUES (?, ?, ?, ?, ?)[0m  [["email", "clay@prohaska-lemke.co"], ["encrypted_password", "$2a$04$0wxKRZDGxY0h74paw02k8eAAY/nJzJLFkxpTdp7JCxPP9AaP7JlqC"], ["created_at", "2020-11-19 09:09:36.483467"], ["updated_at", "2020-11-19 09:09:36.483467"], ["phone", "349397207"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRemind Create (0.2ms)[0m  [1m[32mINSERT INTO "reminds" ("user_id", "send_time") VALUES (?, ?)[0m  [["user_id", 1], ["send_time", "2020-11-19 09:09:36.483467"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRemind Load (0.1ms)[0m  [1m[34mSELECT "reminds".* FROM "reminds" ORDER BY "reminds"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRemind Update (0.1ms)[0m  [1m[33mUPDATE "reminds" SET "send_time" = ?, "status" = ? WHERE "reminds"."id" = ?[0m  [["send_time", "2020-11-19 09:09:36.490539"], ["status", 1], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRemind Create (0.1ms)[0m  [1m[32mINSERT INTO "reminds" ("user_id", "send_time") VALUES (?, ?)[0m  [["user_id", 1], ["send_time", "2020-11-19 09:09:36.483467"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRemind Load (0.1ms)[0m  [1m[34mSELECT "reminds".* FROM "reminds" ORDER BY "reminds"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRemind Update (0.1ms)[0m  [1m[33mUPDATE "reminds" SET "send_time" = ?, "status" = ? WHERE "reminds"."id" = ?[0m  [["send_time", "2020-11-19 09:09:36.503148"], ["status", 1], ["id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reminds"[0m
+  [1m[36mRemind Load (0.1ms)[0m  [1m[34mSELECT "reminds".* FROM "reminds" ORDER BY "reminds"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reminds"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "meda_bernhard@schinner.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "phone") VALUES (?, ?, ?, ?, ?)[0m  [["email", "meda_bernhard@schinner.info"], ["encrypted_password", "$2a$04$jQqtp7rkz02.X6OxA1ROD.E.yH766hMmSC3zW2//Eh8S/oh7qA4Yy"], ["created_at", "2020-11-19 09:09:36.524153"], ["updated_at", "2020-11-19 09:09:36.524153"], ["phone", "349397207"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reminds"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m

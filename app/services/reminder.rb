@@ -10,7 +10,7 @@ class Reminder
     if success
       wait!
     else
-      save_and_sent!
+      [success, message]
     end
   end
 
