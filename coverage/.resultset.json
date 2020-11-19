@@ -1,0 +1,207 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/bao/hbao_app/app/models/user.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          4,
+          null,
+          null
+        ]
+      },
+      "/home/bao/hbao_app/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/bao/hbao_app/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/bao/hbao_app/app/helpers/home_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/bao/hbao_app/app/controllers/home_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/bao/hbao_app/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/home/bao/hbao_app/app/controllers/users/registrations_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/home/bao/hbao_app/app/models/remind.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/home/bao/hbao_app/app/services/reminder.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          6,
+          null,
+          null,
+          1,
+          7,
+          4,
+          null,
+          3,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          4,
+          4,
+          4,
+          null,
+          4,
+          null,
+          0,
+          null,
+          null,
+          1,
+          4,
+          4,
+          null,
+          null,
+          1,
+          8,
+          null,
+          null,
+          1,
+          4,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/bao/hbao_app/app/services/sms_sender.rb": {
+        "lines": [
+          1,
+          1,
+          8,
+          null,
+          null,
+          1,
+          8,
+          null,
+          null,
+          1,
+          null,
+          1,
+          8,
+          null,
+          8,
+          8,
+          8,
+          null,
+          8,
+          8,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/bao/hbao_app/app/jobs/application_job.rb": {
+        "lines": [
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/bao/hbao_app/app/channels/application_cable/connection.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/bao/hbao_app/app/channels/application_cable/channel.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/bao/hbao_app/app/mailers/application_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      }
+    },
+    "timestamp": 1605768916
+  }
+}
