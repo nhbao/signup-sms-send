@@ -30,7 +30,7 @@ RSpec.describe Users::RegistrationsController, type: :controller do
       end
     end
  
-    context "false" do
+    context 'false' do
       let(:email) { '' }
       
       specify do

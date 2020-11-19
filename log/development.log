@@ -20960,3 +20960,543 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 4787)
 
 
+Started GET "/" for ::1 at 2020-11-19 15:09:46 +0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.0ms | Allocations: 1261)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-11-19 15:09:46 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.8ms | Allocations: 602)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2855)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 26.0ms | ActiveRecord: 0.8ms | Allocations: 16347)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-11-19 15:09:51 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"w4SoLCOmBgoIGKKza7+OSK6pFf3QjWhHWGGKIPlRhXe/vCSU3kTKQ1tJhD+DdEzeMGHby4heBx2uTt+3rAtCbg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 540)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"w4SoLCOmBgoIGKKza7+OSK6pFf3QjWhHWGGKIPlRhXe/vCSU3kTKQ1tJhD+DdEzeMGHby4heBx2uTt+3rAtCbg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 142)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1051)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 4541)
+
+
+Started GET "/" for ::1 at 2020-11-19 15:09:57 +0700
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 399)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-11-19 15:09:57 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 141)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1042)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 4775)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-11-19 15:10:08 +0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 197)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 122)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 2054)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 7149)
+
+
+Started POST "/users" for ::1 at 2020-11-19 15:10:28 +0700
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"KB27WVAndAY1DnH0hrejUwVI2bSFTROyJjlEcvPUxLS1UK3NvBq28yhOTplap9jQqq6sqTQcULQAY+B6NPBEPA==", "user"=>{"email"=>"a@localhost.com", "phone"=>"0349397207", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@localhost.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 239)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 89)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1471)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 339ms (Views: 11.6ms | ActiveRecord: 0.3ms | Allocations: 13991)
+
+
+2020-11-19T15:10:53+0700: [Worker(host:bao-TP500LB pid:39601)] Starting job worker
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:10:53.986386' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:10:53.986405') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+Started POST "/users" for ::1 at 2020-11-19 15:10:57 +0700
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"WkaUEqb8s45R9i+7GqVLeDqk8DKerM/hMkz0wL2/quEmfhiqWx5/xwKnCTfybonupGw+BMZ/oLvEY6FX6OVt+A==", "user"=>{"email"=>"a@localhost.com", "phone"=>"0349397207", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@localhost.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "phone") VALUES (?, ?, ?, ?, ?)[0m  [["email", "a@localhost.com"], ["encrypted_password", "$2a$12$LF.OuXKAvnK6pN2qqf.7B.8V3ZKjGweFj3ui7Mj.CuXY9ydfHokji"], ["created_at", "2020-11-19 08:10:57.574615"], ["updated_at", "2020-11-19 08:10:57.574615"], ["phone", "0349397207"]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/reminder.rb:38:in `remind'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/services/reminder.rb:20:in `block in save_and_sent!'
+  [1m[36mRemind Create (0.7ms)[0m  [1m[32mINSERT INTO "reminds" ("user_id", "send_time") VALUES (?, ?)[0m  [["user_id", 33], ["send_time", "2020-11-19 08:10:57.574615"]]
+  ↳ app/services/reminder.rb:20:in `block in save_and_sent!'
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/services/reminder.rb:19:in `save_and_sent!'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/reminder.rb:20:in `block in save_and_sent!'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:10:59.095371' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:10:59.095385') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/services/reminder.rb:20:in `block in save_and_sent!'
+  [1m[36mRemind Create (0.7ms)[0m  [1m[32mINSERT INTO "reminds" ("user_id", "send_time") VALUES (?, ?)[0m  [["user_id", 33], ["send_time", "2020-11-19 08:10:57.574615"]]
+  ↳ app/services/reminder.rb:20:in `block in save_and_sent!'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/services/reminder.rb:19:in `save_and_sent!'
+Redirected to http://localhost:3000/
+Completed 302 Found in 3159ms (ActiveRecord: 7.1ms | Allocations: 34445)
+
+
+Started GET "/" for ::1 at 2020-11-19 15:11:00 +0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 200)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 9.5ms | ActiveRecord: 0.4ms | Allocations: 5825)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-11-19 15:11:03 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7mmkx2YRvJiHT5TggbtURG4SFqTKmVzhQ5CUd0ehi2ySUSh/m/Nw0dQesmxpcJbS8NrYkpJKM7u1v8HgEvtMdQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms | Allocations: 2661)
+
+
+Started GET "/" for ::1 at 2020-11-19 15:11:03 +0700
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 388)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-11-19 15:11:03 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 142)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1056)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 4762)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (1.8ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:11:04.245033' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:11:04.245056') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:11:09.334841' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:11:09.334860') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:11:14.377464' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:11:14.377481') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:11:19.427413' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:11:19.427428') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:11:24.481989' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:11:24.482003') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:11:29.532020' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:11:29.532034') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:11:34.617190' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:11:34.617211') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:11:39.671862' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:11:39.671877') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:11:44.720646' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:11:44.720660') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:11:49.770033' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:11:49.770047') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:11:54.824175' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:11:54.824189') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:11:59.880682' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:11:59.880696') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:12:04.929664' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:12:04.929687') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:12:09.976766' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:12:09.976779') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:12:15.024188' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:12:15.024203') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:12:20.077294' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:12:20.077314') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:12:25.124293' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:12:25.124315') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:12:30.180264' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:12:30.180277') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+Started GET "/users/sign_up" for ::1 at 2020-11-19 15:12:33 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 93)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1385)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 11.9ms | ActiveRecord: 1.1ms | Allocations: 10429)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:12:35.230767' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:12:35.230780') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:12:40.287792' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:12:40.287805') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+Started POST "/users" for ::1 at 2020-11-19 15:12:43 +0700
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"LJDWmmSJ86+0rGK4mopVL0i9NDgt+EuU0EShEGQ9cjxAedjxtO4Z5xykKxhAQnRyvGIGMYY4lt9T+D6oKmhZ/Q==", "user"=>{"email"=>"sain@localhost.com", "phone"=>"0349397207", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sain@localhost.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "phone") VALUES (?, ?, ?, ?, ?)[0m  [["email", "sain@localhost.com"], ["encrypted_password", "$2a$12$PZ80HnGZiRUaXtnjGC1Nbegzqxw1i3uO9lvJLQ4cq10Kt4tFqjIjm"], ["created_at", "2020-11-19 08:12:43.578554"], ["updated_at", "2020-11-19 08:12:43.578554"], ["phone", "0349397207"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:12:45.360973' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:12:45.360987') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:12:50.422891' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:12:50.422926') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/reminder.rb:39:in `remind'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/services/reminder.rb:21:in `block in save_and_sent!'
+  [1m[36mRemind Create (0.3ms)[0m  [1m[32mINSERT INTO "reminds" ("user_id", "send_time") VALUES (?, ?)[0m  [["user_id", 34], ["send_time", "2020-11-19 08:12:43.578554"]]
+  ↳ app/services/reminder.rb:21:in `block in save_and_sent!'
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/services/reminder.rb:20:in `save_and_sent!'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:12:55.478359' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:12:55.478373') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:13:00.542522' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:13:00.542537') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:13:05.607747' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:13:05.607763') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.5ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:13:10.664254' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:13:10.664267') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:13:15.735612' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:13:15.735630') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:13:20.839388' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:13:20.839420') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:13:25.903243' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:13:25.903260') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:13:30.964587' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:13:30.964611') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:13:36.026330' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:13:36.026344') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:13:41.081244' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:13:41.081260') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:13:46.136142' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:13:46.136155') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:13:51.193055' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:13:51.193081') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:13:56.255130' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:13:56.255146') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:14:01.309060' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:14:01.309073') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:14:06.363047' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:14:06.363062') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:14:11.437015' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:14:11.437029') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:14:16.496809' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:14:16.496825') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:14:21.546207' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:14:21.546219') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:14:26.601197' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:14:26.601210') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.5ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:14:31.655072' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:14:31.655084') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:14:36.714826' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:14:36.714839') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:14:41.780033' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:14:41.780048') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:14:46.837143' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:14:46.837155') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:14:51.899757' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:14:51.899770') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:14:56.963188' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:14:56.963208') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:15:02.022604' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:15:02.022618') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.5ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:15:07.097230' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:15:07.097250') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:15:12.155129' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:15:12.155158') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.5ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:15:17.238719' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:15:17.238749') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:15:22.319456' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:15:22.319479') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:15:27.394591' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:15:27.394607') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.5ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:15:32.498682' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:15:32.498702') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:15:37.576639' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:15:37.576654') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:15:42.647787' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:15:42.647801') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:15:47.709974' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:15:47.709987') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (1.0ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:15:52.778537' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:15:52.778551') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.5ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:15:57.845394' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:15:57.845407') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.5ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:16:02.915989' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:16:02.916394') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:16:08.006655' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:16:08.006679') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.5ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:16:13.077498' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:16:13.077512') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:16:18.147081' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:16:18.147104') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:16:23.223197' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:16:23.223210') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:16:28.316942' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:16:28.316991') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:16:33.372078' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:16:33.372092') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:16:38.433554' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:16:38.433570') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:16:43.504808' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:16:43.504823') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.5ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:16:48.568888' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:16:48.568922') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:16:53.627824' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:16:53.627868') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:16:58.702769' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:16:58.702782') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/reminder.rb:21:in `block in save_and_sent!'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/services/reminder.rb:21:in `block in save_and_sent!'
+  [1m[36mRemind Create (2.0ms)[0m  [1m[32mINSERT INTO "reminds" ("user_id", "send_time") VALUES (?, ?)[0m  [["user_id", 34], ["send_time", "2020-11-19 08:12:43.578554"]]
+  ↳ app/services/reminder.rb:21:in `block in save_and_sent!'
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/services/reminder.rb:20:in `save_and_sent!'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/reminder.rb:21:in `block in save_and_sent!'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/services/reminder.rb:21:in `block in save_and_sent!'
+  [1m[36mRemind Create (0.2ms)[0m  [1m[32mINSERT INTO "reminds" ("user_id", "send_time") VALUES (?, ?)[0m  [["user_id", 34], ["send_time", "2020-11-19 08:12:43.578554"]]
+  ↳ app/services/reminder.rb:21:in `block in save_and_sent!'
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/services/reminder.rb:20:in `save_and_sent!'
+Redirected to http://localhost:3000/
+Completed 302 Found in 259792ms (ActiveRecord: 8.6ms | Allocations: 380617)
+
+
+Started GET "/" for ::1 at 2020-11-19 15:17:03 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 69)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 6.3ms | ActiveRecord: 0.9ms | Allocations: 10873)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:17:03.755755' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:17:03.755768') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.5ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:17:08.821531' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:17:08.821547') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:17:13.884108' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:17:13.884123') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.5ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:17:18.965620' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:17:18.965681') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:17:24.016273' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:17:24.016288') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+Started DELETE "/users/sign_out" for ::1 at 2020-11-19 15:17:24 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"80V1TAJGHtZvwryh8eMEsoN/0Ywdf3dRSiJi4A1zuDt4oEa1d8J0QuW9CllsQJ2AjcJ7Ix5UmehpcRI6XqRRbA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms | Allocations: 2563)
+
+
+Started GET "/" for ::1 at 2020-11-19 15:17:24 +0700
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 392)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-11-19 15:17:24 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 146)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1064)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 4932)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-11-19 15:17:25 +0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1247)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 5164)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:17:29.073201' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:17:29.073213') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:17:34.133376' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:17:34.133390') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+Started POST "/users" for ::1 at 2020-11-19 15:17:37 +0700
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"MRm2bplbGM1Ps36SDMG5fZZWbp5gs2RuW9LxShbu2V7CMfDsKYIFJXtAgJ7hOoInu/q3gK1Lu4jw9fEoOWjbnA==", "user"=>{"email"=>"sn@localhost.com", "phone"=>"0349397207", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sn@localhost.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "phone") VALUES (?, ?, ?, ?, ?)[0m  [["email", "sn@localhost.com"], ["encrypted_password", "$2a$12$Nz8SiFAgLmtYOSHevxJbIuuEExobmLOwbyK8Kdr7CfqZ7HujUvQ8i"], ["created_at", "2020-11-19 08:17:37.460101"], ["updated_at", "2020-11-19 08:17:37.460101"], ["phone", "0349397207"]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.9ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:17:39.204996' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:17:39.205011') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/reminder.rb:39:in `remind'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/services/reminder.rb:21:in `block in save_and_sent!'
+  [1m[36mRemind Create (0.3ms)[0m  [1m[32mINSERT INTO "reminds" ("user_id", "send_time") VALUES (?, ?)[0m  [["user_id", 35], ["send_time", "2020-11-19 08:17:37.460101"]]
+  ↳ app/services/reminder.rb:21:in `block in save_and_sent!'
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/reminder.rb:20:in `save_and_sent!'
+  [1m[36mRemind Load (0.2ms)[0m  [1m[34mSELECT "reminds".* FROM "reminds" ORDER BY "reminds"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/services/reminder.rb:30:in `wait!'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/reminder.rb:30:in `wait!'
+  [1m[36mDelayed::Backend::ActiveRecord::Job Create (0.5ms)[0m  [1m[32mINSERT INTO "delayed_jobs" ("handler", "run_at", "queue", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["handler", "--- !ruby/object:Delayed::PerformableMethod\nobject: !ruby/object:Remind\n  concise_attributes:\n  - !ruby/object:ActiveModel::Attribute::FromDatabase\n    name: id\n    value_before_type_cast: 39\n  - !ruby/object:ActiveModel::Attribute::FromDatabase\n    name: user_id\n    value_before_type_cast: 35\n  - !ruby/object:ActiveModel::Attribute::FromDatabase\n    name: send_time\n    value_before_type_cast: '2020-11-19 08:17:37.460101'\n  - !ruby/object:ActiveModel::Attribute::FromDatabase\n    name: status\n    value_before_type_cast: 0\n  new_record: false\n  active_record_yaml_version: 2\nmethod_name: :update\nargs:\n- :status: done\n  :send_time: !ruby/object:DateTime 2020-11-19 15:17:43.346592873 +07:00\n"], ["run_at", "2020-11-26 08:17:43.346486"], ["queue", "default"], ["created_at", "2020-11-19 08:17:43.365885"], ["updated_at", "2020-11-19 08:17:43.365885"]]
+  ↳ app/services/reminder.rb:30:in `wait!'
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/reminder.rb:30:in `wait!'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/reminder.rb:31:in `wait!'
+  [1m[36mDelayed::Backend::ActiveRecord::Job Create (0.5ms)[0m  [1m[32mINSERT INTO "delayed_jobs" ("handler", "run_at", "queue", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["handler", "--- !ruby/object:Delayed::PerformableMethod\nobject: !ruby/object:SmsSender\n  user: !ruby/object:User\n    concise_attributes:\n    - !ruby/object:ActiveModel::Attribute::FromDatabase\n      name: id\n      value_before_type_cast: 35\n    - !ruby/object:ActiveModel::Attribute::FromDatabase\n      name: email\n      value_before_type_cast: sn@localhost.com\n    - !ruby/object:ActiveModel::Attribute::FromDatabase\n      name: encrypted_password\n      value_before_type_cast: \"$2a$12$Nz8SiFAgLmtYOSHevxJbIuuEExobmLOwbyK8Kdr7CfqZ7HujUvQ8i\"\n    - !ruby/object:ActiveModel::Attribute::FromDatabase\n      name: reset_password_token\n    - !ruby/object:ActiveModel::Attribute::FromDatabase\n      name: reset_password_sent_at\n    - !ruby/object:ActiveModel::Attribute::FromDatabase\n      name: remember_created_at\n    - !ruby/object:ActiveModel::Attribute::FromDatabase\n      name: created_at\n      value_before_type_cast: 2020-11-19 08:17:37.460101000 Z\n    - !ruby/object:ActiveModel::Attribute::FromDatabase\n      name: updated_at\n      value_before_type_cast: 2020-11-19 08:17:37.460101000 Z\n    - !ruby/object:ActiveModel::Attribute::FromDatabase\n      name: phone\n      value_before_type_cast: '0349397207'\n    new_record: false\n    active_record_yaml_version: 2\nmethod_name: :perform\nargs: []\n"], ["run_at", "2020-11-26 08:17:43.380028"], ["queue", "default"], ["created_at", "2020-11-19 08:17:43.381469"], ["updated_at", "2020-11-19 08:17:43.381469"]]
+  ↳ app/services/reminder.rb:31:in `wait!'
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/reminder.rb:31:in `wait!'
+Redirected to http://localhost:3000/
+Completed 302 Found in 6247ms (ActiveRecord: 20.5ms | Allocations: 45306)
+
+
+Started GET "/" for ::1 at 2020-11-19 15:17:43 +0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 62)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 14.9ms | ActiveRecord: 0.2ms | Allocations: 4940)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:17:44.252580' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:17:44.252594') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:17:49.305590' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:17:49.305605') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:17:54.356563' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:17:54.356576') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:17:59.418704' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:17:59.418717') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:18:04.482038' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:18:04.482054') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:18:09.540151' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:18:09.540172') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:18:14.597951' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:18:14.597964') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:18:19.655938' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:18:19.655952') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:18:24.732516' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:18:24.732531') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:18:29.782905' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:18:29.782918') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:18:34.830880' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:18:34.830899') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:18:39.896417' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:18:39.896441') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.5ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:18:44.947789' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:18:44.947802') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:18:49.997193' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:18:49.997208') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:18:55.044761' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:18:55.044774') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:19:00.093250' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:19:00.093264') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:19:05.138718' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:19:05.138732') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:19:10.200598' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:19:10.200612') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:19:15.248987' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:19:15.249000') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:19:20.301251' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:19:20.301267') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:19:25.349383' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:19:25.349396') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:19:30.398756' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:19:30.398771') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:19:35.445343' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:19:35.445357') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:19:40.495177' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:19:40.495191') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:19:45.585566' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:19:45.585584') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:19:50.639018' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:19:50.639036') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:19:55.698777' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:19:55.698792') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:20:00.747237' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:20:00.747252') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:20:05.800955' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:20:05.800969') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:20:10.848808' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:20:10.848822') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:20:15.910174' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:20:15.910189') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:20:20.954378' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:20:20.954392') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:20:26.005085' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:20:26.005098') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:20:31.054083' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:20:31.054096') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:20:36.108933' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:20:36.108945') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:20:41.159551' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:20:41.159577') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:20:46.209818' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:20:46.209832') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:20:51.269525' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:20:51.269539') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:20:56.321038' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:20:56.321052') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:21:01.368638' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:21:01.368652') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:21:06.418906' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:21:06.418921') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:21:11.466415' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:21:11.466428') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:21:16.522300' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:21:16.522314') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:21:21.569476' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:21:21.569490') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:21:26.625665' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:21:26.625682') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:21:31.676660' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:21:31.676675') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:21:36.729546' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:21:36.729561') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:21:41.784014' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:21:41.784028') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:21:46.840083' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:21:46.840096') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:21:51.896482' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:21:51.896495') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.5ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:21:56.958273' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:21:56.958286') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:22:02.027943' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:22:02.028017') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:22:07.119151' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:22:07.119173') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:22:12.176678' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:22:12.176727') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.5ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:22:17.255801' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:22:17.255814') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.7ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:22:22.319210' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:22:22.319222') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:22:27.384702' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:22:27.384718') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:22:32.467327' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:22:32.467343') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.9ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:22:37.536460' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:22:37.536473') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1m[34mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2020-11-19 08:22:42.599360' AND (locked_at IS NULL OR locked_at < '2020-11-19 03:22:42.599373') OR locked_by = 'host:bao-TP500LB pid:39601') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT ?[0m  [["LIMIT", 10]]

@@ -13,7 +13,7 @@ class SmsSender
     number_to_send_to = @user.phone.to_i
 
     twilio_sid = "AC5e2fd620f1c51181e0d9c3a44ca984d5"
-    twilio_token = "74e7024bafdedaad79b6c53fd310590c"
+    twilio_token = "d22544daeae5b364d60f2495d0811c9f"
     twilio_phone_number = "9704898417"
 
     @twilio_client = Twilio::REST::Client.new twilio_sid, twilio_token

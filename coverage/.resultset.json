@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/bao/hbao_app/app/models/user.rb": {
+      "/home/bao/signup-sms-send/app/models/user.rb": {
         "lines": [
           1,
           null,
@@ -17,43 +17,43 @@
           null
         ]
       },
-      "/home/bao/hbao_app/app/models/application_record.rb": {
+      "/home/bao/signup-sms-send/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/home/bao/hbao_app/app/helpers/application_helper.rb": {
+      "/home/bao/signup-sms-send/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/bao/hbao_app/app/helpers/home_helper.rb": {
+      "/home/bao/signup-sms-send/app/helpers/home_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/bao/hbao_app/app/controllers/home_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/home/bao/hbao_app/app/controllers/application_controller.rb": {
+      "/home/bao/signup-sms-send/app/controllers/home_controller.rb": {
         "lines": [
           1,
           1,
           null,
+          null
+        ]
+      },
+      "/home/bao/signup-sms-send/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
           1,
           null
         ]
       },
-      "/home/bao/hbao_app/app/controllers/users/registrations_controller.rb": {
+      "/home/bao/signup-sms-send/app/controllers/users/registrations_controller.rb": {
         "lines": [
           1,
           null,
@@ -69,7 +69,7 @@
           null
         ]
       },
-      "/home/bao/hbao_app/app/models/remind.rb": {
+      "/home/bao/signup-sms-send/app/models/remind.rb": {
         "lines": [
           1,
           1,
@@ -78,7 +78,7 @@
           null
         ]
       },
-      "/home/bao/hbao_app/app/services/reminder.rb": {
+      "/home/bao/signup-sms-send/app/services/reminder.rb": {
         "lines": [
           1,
           null,
@@ -128,7 +128,7 @@
           null
         ]
       },
-      "/home/bao/hbao_app/app/services/sms_sender.rb": {
+      "/home/bao/signup-sms-send/app/services/sms_sender.rb": {
         "lines": [
           1,
           1,
@@ -158,7 +158,7 @@
           null
         ]
       },
-      "/home/bao/hbao_app/app/jobs/application_job.rb": {
+      "/home/bao/signup-sms-send/app/jobs/application_job.rb": {
         "lines": [
           0,
           null,
@@ -171,7 +171,7 @@
         "branches": {
         }
       },
-      "/home/bao/hbao_app/app/channels/application_cable/connection.rb": {
+      "/home/bao/signup-sms-send/app/channels/application_cable/connection.rb": {
         "lines": [
           0,
           0,
@@ -181,7 +181,7 @@
         "branches": {
         }
       },
-      "/home/bao/hbao_app/app/channels/application_cable/channel.rb": {
+      "/home/bao/signup-sms-send/app/channels/application_cable/channel.rb": {
         "lines": [
           0,
           0,
@@ -191,7 +191,7 @@
         "branches": {
         }
       },
-      "/home/bao/hbao_app/app/mailers/application_mailer.rb": {
+      "/home/bao/signup-sms-send/app/mailers/application_mailer.rb": {
         "lines": [
           0,
           0,
@@ -202,6 +202,6 @@
         }
       }
     },
-    "timestamp": 1605768916
+    "timestamp": 1605774113
   }
 }
