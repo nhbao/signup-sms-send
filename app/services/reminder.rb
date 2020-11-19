@@ -6,7 +6,8 @@ class Reminder
   end
 
   def perform
-    if save_and_sent! == true
+    success, message = save_and_sent!
+    if success
       wait!
     else
       save_and_sent!
@@ -20,7 +21,7 @@ class Reminder
       remind.save!
       SmsSender.new(user: @user).perform
     end
-    true
+    [true, 'success']
   rescue StandardError => e
     [false, e.message]  
   end
