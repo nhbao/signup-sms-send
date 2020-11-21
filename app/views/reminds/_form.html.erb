@@ -1,0 +1,17 @@
+<%= simple_form_for remind do |form| %>
+  <p>
+    <%= form.input :name %>
+  </p>
+ 
+  <p>
+    <%= form.input :message_remind %>
+  </p>
+
+  <p>
+    <%= form.input :delay_days %>
+  </p>
+ 
+  <p>
+    <%= form.button :submit %>
+  </p>
+<% end %>

@@ -1,6 +1,7 @@
 class SmsSender
-  def initialize(user:)
+  def initialize(user:, messages:)
     @user = user
+    @messages = messages
   end
 
   def perform
@@ -20,7 +21,7 @@ class SmsSender
     @twilio_client.messages.create(
       :from => "+1#{twilio_phone_number}",
       :to => "+84#{number_to_send_to}",
-      :body => "Wellcome #{number_to_send_to} to Localhost.com"
+      :body => "#{@messages}"
     )
   end
 end

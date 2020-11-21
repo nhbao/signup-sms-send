@@ -20,7 +20,7 @@ RSpec.configure do |config|
 
   config.before(:each) do
     stub_request(:post, "https://api.twilio.com/2010-04-01/Accounts/AC5e2fd620f1c51181e0d9c3a44ca984d5/Messages.json").with(
-      body: {"Body"=>"Wellcome 349397207 to Localhost.com", "From"=>"+19704898417", "To"=>"+84349397207"},
+      body: {"Body"=>"Congratulations Sign Up successful", "From"=>"+19704898417", "To"=>"+84349397207"},
       headers: {
         'Accept'=>'application/json',
         'Accept-Charset'=>'utf-8',

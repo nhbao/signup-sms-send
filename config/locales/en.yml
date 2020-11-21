@@ -31,3 +31,14 @@
 
 en:
   hello: "Hello world"
+  messages:
+    delete_comfirm: 'Are you sure?'
+    create:
+      success: 'Create successful'
+      error: 'Can not create'
+    update:
+      success: 'Update successful'
+      error: 'Can not update'
+    delete:
+      success: 'Delete successful'
+      error: 'Can not delete'

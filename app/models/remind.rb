@@ -1,5 +1,6 @@
 class Remind < ApplicationRecord
-  enum status: [:wait, :done]
-  
-  belongs_to :user
+  enum remind_by: [:sms]
+
+  validates :name, presence: true
+  validates :delay_days, numericality: true
 end
