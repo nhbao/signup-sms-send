@@ -28,9 +28,10 @@ ActiveRecord::Schema.define(version: 2020_11_18_013821) do
   end
 
   create_table "reminds", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.datetime "send_time"
-    t.integer "status", default: 0
+    t.string "name", null: false
+    t.string "message_remind"
+    t.integer "delay_days", default: 0
+    t.integer "remind_by", default: 0
   end
 
   create_table "users", force: :cascade do |t|

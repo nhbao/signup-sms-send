@@ -1,0 +1,16 @@
+en:
+  events:
+    actions:
+      new: 'New Remind'
+      create: 'Create Remind' 
+      index: 'Remind'
+      edit: 'Edit'
+      show: 'Show'
+  activerecord:
+    attributes:
+      event:
+        id: '#'
+        name: 'Title'
+        message_remind: 'Message'
+        delay_days: 'Days'
+        remind_by: 'Remind By'
