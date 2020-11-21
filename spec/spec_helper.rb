@@ -25,7 +25,7 @@ RSpec.configure do |config|
         'Accept'=>'application/json',
         'Accept-Charset'=>'utf-8',
         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'Authorization'=>'Basic QUM1ZTJmZDYyMGYxYzUxMTgxZTBkOWMzYTQ0Y2E5ODRkNTpkMjI1NDRkYWVhZTViMzY0ZDYwZjI0OTVkMDgxMWM5Zg==',
+        'Authorization'=>'Basic QUM1ZTJmZDYyMGYxYzUxMTgxZTBkOWMzYTQ0Y2E5ODRkNTpiMTgwNmEyN2Q0MzdlZTgxYjA0N2Y3ODJjNGQ3YzBhYg==',
         'Content-Type'=>'application/x-www-form-urlencoded',
         'User-Agent'=>'twilio-ruby/5.42.0 (ruby/x86_64-linux-gnu 2.7.0-p0)'
       }
